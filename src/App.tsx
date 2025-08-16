@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
-import { Home, Star, Trophy, Flag } from 'lucide-react';
-import HomePage from './components/HomePage';
-import FlagPuzzle from './components/FlagPuzzle';
-import TriviaQuiz from './components/TriviaQuiz';
-import MemoryGame from './components/MemoryGame';
+import { Flag, Home, Trophy } from 'lucide-react';
+import { useState } from 'react';
 import Confetti from './components/Confetti';
+import FlagPuzzle from './components/FlagPuzzle';
+import HomePage from './components/HomePage';
+import MemoryGame from './components/MemoryGame';
+import TriviaQuiz from './components/TriviaQuiz';
 
 type GameType = 'home' | 'puzzle' | 'trivia' | 'memory';
 
@@ -42,7 +42,7 @@ function App() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-red-600 via-red-500 to-white">
       {showConfetti && <Confetti />}
-      
+
       {/* Navigation */}
       {currentGame !== 'home' && (
         <nav className="bg-white/10 backdrop-blur-sm border-b border-white/20">
@@ -55,7 +55,7 @@ function App() {
                 <Home className="w-5 h-5" />
                 <span className="font-semibold">Home</span>
               </button>
-              
+
               <div className="flex items-center space-x-4">
                 <div className="flex items-center space-x-1 text-white">
                   <Trophy className="w-5 h-5" />
@@ -63,7 +63,7 @@ function App() {
                     {scores.puzzle + scores.trivia + scores.memory}
                   </span>
                 </div>
-                
+
                 <div className="flex items-center space-x-1 text-white">
                   <Flag className="w-5 h-5" />
                   <span className="text-sm">Merdeka!</span>
@@ -84,7 +84,7 @@ function App() {
         <div className="max-w-7xl mx-auto px-4 text-center">
           <div className="flex items-center justify-center space-x-2 mb-2">
             <Flag className="w-5 h-5" />
-            <span className="font-bold">Dirgahayu Indonesia ke-79</span>
+            <span className="font-bold">Dirgahayu Indonesia ke-80</span>
             <Flag className="w-5 h-5" />
           </div>
           <p className="text-red-200 text-sm">
